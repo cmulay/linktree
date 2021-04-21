@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <link rel="stylesheet" href="/assets/style.css" />
+  <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/38172685?v=4" type="image/x-icon">
+
+  <title>Social Hub | @cmulay</title>
+</head>
+
+<body>
+  <div class="container">
+    <img src="https://avatars.githubusercontent.com/u/38172685?v=4" alt="cmulay | Profile" class="profile">
+    <h2 style="color: black;">Chinmay Mulay</h2>
+    <i style="color: black;">Full Stack Developer</i>
+    <p class="subtitle">Through code I contribute to bring about a change.</p>
+
+    <div class="info-container">
+      <div class="social-media-container">
+        <a href="https://github.com/cmulay">
+          <i data-feather="github"></i>
+        </a>
+        <a href="https://linkedin.com/in/cmulay">
+          <i data-feather="linkedin"></i>
+        </a>
+        <a href="https://twitter.com/cmulay17?s=09">
+          <i data-feather="twitter"></i>
+        </a>
+      </div>
+
+      <div class="content">
+        <div id="secondary-content" class="secondary-content">
+          <h3> <i id="go-back-button" data-feather="arrow-left"></i> My Setup</h3>
+          <p class="styled-text">
+            PC : i5 | 16 GB | 128SSD + 2TB |
+          </p>
+          <p class="styled-text">
+            💻 Macbook Air 2017 | i5 8gb 128ssd
+          </p>
+          <p class="styled-text">
+            💻 Microsoft Surface Pro 4
+          </p>
+          <p class="styled-text">
+            📺 Monitor LG24MP88HV
+          </p>
+        </div>
+        <div class="main-content">
+          <a class="link" href="coming-soon.html">
+            Discord
+          </a>
+          <a class="link" href="mailto:codewithchin@gmail.com" target="_blank">
+            Mail ID
+          </a>
+          <a class="link" href="coming-soon.html">
+            Medium
+          </a>
+          <a id="setup-button" class="link">
+            💻 My Setup
+          </a>
+          <a class="link" href="https://cmulay.is-a.dev/" target="_blank">
+            Portfolio
+          </a>
+          <a class="link" href="coming-soon.html">
+            Qwiklabs
+          </a>
+          <a class="link" href="https://t.me/cmulay" target="_blank">
+            Telegram
+          </a>
+          <a class="link highlight" href="https://www.buymeacoffee.com/cmulay" target="_blank">
+            Buy me a coffee
+          </a>
+          <center>
+            <i>Thanks for visiting</i>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+  feather.replace();
+</script>
+<script>
+  const setupButton = document.getElementById("setup-button");
+  const goBackButton = document.getElementById("go-back-button");
+
+  setupButton.addEventListener("click", showContent);
+  goBackButton.addEventListener("click", hideContent);
+
+  function showContent() {
+    document.getElementById("secondary-content").classList.remove("hide");
+    document.getElementById("secondary-content").classList.add("show");
+  }
+
+  function hideContent() {
+    document.getElementById("secondary-content").classList.remove("show");
+    document.getElementById("secondary-content").classList.add("hide");
+  }
+</script>
+
+</html>
