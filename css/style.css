@@ -153,6 +153,7 @@ body {
 }
 
 .link {
+  position: relative;
   margin: 15px auto;
   width: 100%;
   height: 45px;
@@ -167,6 +168,24 @@ body {
   -webkit-box-shadow: 4px 4px 18px -5px rgba(179, 179, 179, 0.72);
   -moz-box-shadow: 4px 4px 18px -5px rgba(179, 179, 179, 0.72);
   box-shadow: 4px 4px 18px -5px rgba(179, 179, 179, 0.72);
+  box-shadow: inset 0 0 0 0 #C180DF;
+  transition: ease-out 0.3s;
+}
+
+.link i{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: ease-out 0.3s;
+}
+
+.link:hover{
+  border-radius: 10px;
+  box-shadow: inset 440px 0 0 0 #C180DF;
+  cursor: pointer;
+  color: white;
 }
 
 .styled-text {
