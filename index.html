@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/38172685?v=4" type="image/x-icon">
 
+  <!-- icons CDN -->
+  <script src="https://kit.fontawesome.com/43e0cb9760.js" crossorigin="anonymous"></script>
+
   <title>Social Hub | @cmulay</title>
 </head>
 
@@ -34,9 +37,9 @@
 
       <div class="content">
         <div id="secondary-content" class="secondary-content">
-          <h3> <i id="go-back-button" data-feather="arrow-left"></i> My Setup</h3>
+          <h3> <i style="cursor: pointer;" id="go-back-button" data-feather="arrow-left"></i> My Setup</h3>
           <p class="styled-text">
-            PC : i5 | 16 GB | 128SSD + 2TB |
+            💻 PC : i5 | 16 GB | 128SSD + 2TB |
           </p>
           <p class="styled-text">
             💻 Macbook Air 2017 | i5 8gb 128ssd
@@ -48,30 +51,37 @@
             📺 Monitor LG24MP88HV
           </p>
         </div>
-        <div class="main-content">
-          <a class="link" href="coming-soon.html">
-            Discord
+        <div class="main-content" href="coming-soon.html">
+          <a class="link">
+            <p>Discord</p>
+            <i class="fab fa-discord"></i>
           </a>
           <a class="link" href="mailto:codewithchin@gmail.com" target="_blank">
-            Mail ID
+            <p>Mail ID</p>
+            <i class="fas fa-envelope"></i>
           </a>
-          <a class="link" href="coming-soon.html">
-            Medium
+          <a class="link">
+            <p>Medium</p>
+            <i class="fab fa-medium"></i>
           </a>
           <a id="setup-button" class="link">
-            💻 My Setup
+            <p>💻 My Setup</p>
+            <i class="fas fa-desktop"></i>
           </a>
           <a class="link" href="https://cmulay.is-a.dev/" target="_blank">
-            Portfolio
+            <p>Portfolio</p>
+            <i class="fas fa-link"></i>
           </a>
           <a class="link" href="coming-soon.html">
             Qwiklabs
           </a>
           <a class="link" href="https://t.me/cmulay" target="_blank">
-            Telegram
+            <p>Telegram</p>
+            <i class="fab fa-telegram-plane"></i>
           </a>
           <a class="link highlight" href="https://www.buymeacoffee.com/cmulay" target="_blank">
-            Buy me a coffee
+            <p>Buy me a coffee</p>
+            <i class="fas fa-coffee"></i>
           </a>
           <center>
             <i>Thanks for visiting</i>
@@ -88,9 +98,27 @@
 <script>
   const setupButton = document.getElementById("setup-button");
   const goBackButton = document.getElementById("go-back-button");
+  const link = document.getElementsByClassName("link");
 
   setupButton.addEventListener("click", showContent);
   goBackButton.addEventListener("click", hideContent);
+
+  for (var i = 0; i < link.length; i++) {
+    link[i].addEventListener("mouseover", showIcon);
+    link[i].addEventListener("mouseout", remIcon);
+  }
+
+  function showIcon(event) {
+    link_i = event.target.getElementsByTagName("i")[0];
+    event.target.getElementsByTagName('p')[0].style.display = "none"
+    link_i.style.opacity = 1;
+  }
+
+  function remIcon(event) {
+    link_i = event.target.getElementsByTagName("i")[0];
+    event.target.getElementsByTagName('p')[0].style.display = "initial"
+    link_i.style.opacity = 0;
+  }
 
   function showContent() {
     document.getElementById("secondary-content").classList.remove("hide");
