@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 p {
   margin: 5px 0;
 }
@@ -25,6 +24,7 @@ body {
   display: flex;
   justify-content: center;
   position: relative;
+  margin-bottom: 10em;
 }
 
 .container {
